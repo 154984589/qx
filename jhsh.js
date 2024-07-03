@@ -57,4 +57,6 @@ body = body.replace(/\"SpBkAtAyTm_Ind":"\d+",/g, '\"SpBkAtAyTm_Ind": "0",');
 
 body = body.replace(/\"USER_GET_NUM":"\d+",/g, '\"USER_GET_NUM": "0",');
 
+body = body.replace(/\"errCode":"\d+",/g, '\"errCode": "0",');
+
 $done({body});
