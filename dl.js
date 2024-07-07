@@ -14,10 +14,7 @@ const formattedDate = `${year}-${month}-${day}`;
 
 
 var body = $response.body;
-
+var json = JSON.parse(body)
 console.log('body',body)
-body.data[1].status = 1
-
-
-
+console.log('json',json)
 $done({body});
