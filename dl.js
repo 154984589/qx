@@ -15,6 +15,9 @@ const formattedDate = `${year}-${month}-${day}`;
 
 var body = $response.body;
 
+console.log('body',body)
 body.data[1].status = 1
+
+
 
 $done({body});
