@@ -17,4 +17,7 @@ var body = $response.body;
 var json1 = JSON.parse(body)
 console.log(body)
 console.log(json1)
+json1.data[0].status = 1
+json1.data[1].status = 1
+body = JSON.stringify(json1)
 $done({body});
