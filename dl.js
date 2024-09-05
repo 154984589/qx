@@ -12,20 +12,10 @@ const day = currentDate.getDate() < 10 ? '0' + currentDate.getDate() : currentDa
 // 组合成“年-月-日”格式
 const formattedDate = `${year}-${month}-${day}`;
 
+const st = new Date(formattedDate + '14:00:00').getTime()
 
 var body = $response.body;
-var json1 = JSON.parse(body)
-console.log(body)
-console.log(json1)
-json1.data[0].status = 1
-json1.data[1].status = 1
-json1.data[2].status = 1
-json1.data[3].status = 1
-json1.data[4].status = 1
-json1.data[5].status = 1
-json1.data[6].status = 1
-json1.data[7].status = 1
-json1.data[8].status = 1
-json1.data[9].status = 1
-body = JSON.stringify(json1)
+
+body = body.replace(/\"st":"\d+",/g, '\"st": st,');
+
 $done({body});
