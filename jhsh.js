@@ -61,7 +61,8 @@ var body = $response.body;
 // body = body.replace(/\"SpBkAtAyTm_Ind":"\d+",/g, '\"SpBkAtAyTm_Ind": "0",');
 
 // body = body.replace(/\"USER_GET_NUM":"\d+",/g, '\"USER_GET_NUM": "0",');
-body = body.replace(/\"activityStatus":"\d+",/g, '\"activityStatus": "0",');
+console.log(body)
+body = "activityStatus": 1
 // // body = body.replace(/\"errCode":"\d+",/g, '\"errCode": "0",');
 
 $done({body});
